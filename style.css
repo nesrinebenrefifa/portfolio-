@@ -1,244 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-size: 'popins',sans-serif;
-    box-sizing: border-box;
-}
-body{
-    background: #080008;
-    color: white;
-}
-#header{
-    width: 100%;
-    height: 100vh;
-   
-    background-size: cover;
-    background-position: center;
-}
-.container{
-padding: 10px 10%;
-}
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    position: relative;
-}
-nav ul li a::after{
-   content: '';
-   width: 100%;
-   height: 3px;
-   background: #ff004f;
-   position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5 s;
-}
-nav ul li a:hover::after{
-    width: 100%;}
 
 
-
-.a{
-    width: 300px;
-    height: 300px;
-    margin : 100px;
-    border-radius: 200px;
-    float: left;
-
-}
-.header-text{
-    margin: 10%;
-    font-size: 20px;
-}
-.header-text p{
-   text-align: center;
-}
-.header-text span{
-    color: #ff004f;
-    text-decoration:underline;
-}
-.Socia{
-    margin-top: 5px;
-   
-
-}
-.Social a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15PX;
-    display: inline-block;
-    color:#ababab;
-   
-
-
-} 
-/* ------------about--------------- */
-
-#About{
-    padding: 80px 0;
-    color: #ababab;
-    margin-left: 50px;
-    
-
-}
-.About-col-2 h1{
-    color: white;
-    font-size: 50px;
-}
-.About-col-2 p{
-    margin-top: 20px;
-}
-.row{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-/* img{
-    height: 320px;
-    width: 320px;
-} */
-.About-col-1{
-    flex-basis: 35%;
-
-}
-.About-col-1 img{
-    width: 100%;
-    border-radius: 15px;
-
-}
-.About-col-2{
-    flex-basis: 60%;
-}
-
-.tab-titles{
-    display: flex;
-    margin: 20px 0 40px;
-}
-.tab-links{
-    margin-right: 50px;
-    font-size:  18PX; ;
-    font-weight:500 ;
-    cursor: pointer;
-    position: relative;
-}
-.tab-links::after{
-    content: '';
-    width: 0;
-    height:3px ;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-.tab-links.active-link::after{
-    width: 50%;
-}
-.tab-contents ul li {
-    list-style: none;
-    margin: 10px 0;
-}
-.tab-contents ul li span{
-font-size: 14px;
-color: #b54769;
-}
-.tab-contents{
-    display: none;
-}
-.tab-contents.active{
-    display: block;
-}
-/* ---------------contact----------- */
-.sub-title{
-    font-size: 50px;
-}
-.contact-left{
-    flex-basis: 35%;
-
-}
-.contact-right{
-    flex-basis:  60%;
-}
-.contact-left P{
-    margin-top: 30px;}
-    .contact-left p i{
-        color: #ff004f;
-        margin-right: 15px;
-        font-size: 25px;
+/* Media Queries */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
     }
-    .Social-icons{
-        margin-top: 30px;
-    }
-    .Social-icons a{
-        text-decoration: none;
-        font-size: 30px;
-        margin-right: 15PX;
-        display: inline-block;
-        color: #ababab;
 
+    .header-text h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
     }
-    .Social-icons a:hover{
-        color: #ff004f;
-    }
-    .btn{
-        color: #fff;
-       background-color: #ff0051;
-    
-        height: 40px;
-        width: 15%;
-        border-radius: 6px;
-        margin-bottom: 4px;
-    }
-    .btn a{
-        color:white;
-    }
-    .contact-right form{
-        width: 100%;
 
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills on small screens */
     }
-    form input , form textarea{
-        width: 100%;
-        border:0;
-        outline:none;
-        background: #262626;
-        padding:15px ;
-        margin:15px 0 ;
-        color: #fff;
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 120px; /* Smaller image on very small screens */
     }
-    .b{
-        width: 300px;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 10px;
-        background: rgb(249, 211, 211);
-        box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
-        display: flex;
-      }
-      .box i{
-        font-size: 7rem;
-        float: right;
-        margin: -20px 20px 20px 0;
-      }
-      .html{
-        display: flex;
-        color: rgb(25, 94, 54);
-      }
-      .css{
-        color: rgb(104, 179, 35);
-      }
-      .js{
-        color: rgb(28, 98, 179);
-      }
-      
+
+    h1, h2 {
+        font-size: 1.2em; /* Smaller headings */
+    }
+}
